@@ -1,0 +1,34 @@
+{
+  "name": "dsh-rounded-panels",
+  "version": "0.1.0",
+  "description": "VS Code 风格的 DSH Web 圆角悬浮面板：侧边栏/主表面/详情列圆角卡片 + 可调缝隙，通用设置内滑杆实时调节；兼容 dsh-client-ui-custom 美化插件（含历史条实时跟随与 rail 图标居中）。零颜色覆盖。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "rounded",
+    "panels",
+    "vscode"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+# ============================================================================
+# dsh-rounded-panels —— DSH bundle patch
+# ============================================================================
+# 插件的"挂载声明"。DSH 启动时按 bundle 层栈叠加各插件 patch，
+# 本文件把圆角面板插件插入 Web profile 的浏览器插件名录。
+#
+# 注意：Loader 行名必须与 lib/client.js 里 __ModuleLoader__.load 烙入的
+# 注册 id 完全一致（都是 dsh-rounded-panels），否则浏览器模块启动会拒绝。
+#
+# 安装：
+#   dsh plugin --profile web add dsh-rounded-panels
+# 本地开发安装：
+#   dsh plugin --profile web add link:<本目录绝对路径>
+# ============================================================================
+
+- insert:
+    - id: ui-rounded-panels
+      name: dsh-rounded-panels
